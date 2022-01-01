@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-Down menu Design - Easy </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="manu-bar">
+        <ul>
+            <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Services</a>
+                <div class="sub-manu-1">
+                    <ul>
+                        <li><a href="#">Mision</a></li>
+                        <li><a href="#">vision</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-clone" aria-hidden="true"></i>Clients</a>
+                <div class="sub-manu-1">
+                    <ul>
+                        <li><a href="#">Web Designing</a></li>
+                        <li class="hover-me"><a href="#">Marketing</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-manu-2">
+                                <ul>
+                                    <li><a href="#">SCO</a></li>
+                                    <li><a href="#">Socail-Media</a></li>
+                                    <li><a href="#">Email-Marketing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Mobail App</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-manu-2">
+                                <ul>
+                                    <li><a href="#">Android App</a></li>
+                                    <li><a href="#">IOS App</a></li>
+                                    <li><a href="#">Ionic App</a></li>
+                                    <li><a href="#">Flutter App</a></li>
+                                    <li><a href="#">Uninty App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>About US</a></li>
+            <li><a href="#"><i class="fa fa-angellist" aria-hidden="true"></i>INvesters</a></li>
+            <li><a href="#"><i class="fa fa-inr" aria-hidden="true"></i>Pricing</a></li>
+            <li><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>Training</a></li>
+            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Contect</a></li>
+        </ul>
+       
+
+    </div>
+    
+    <div id="message"></div>
+    <br><br><br>
+   
+
+
+    <div class="container my-3">
+        <h1>Vicky Library</h1>
+        <hr>
+        <form id="libraryForm">
+            <div class="form-group row">
+                <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bookName" placeholder="Book Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="author" placeholder="Author">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction"
+                                checked>
+                            <label class="form-check-label" for="fiction">
+                                Fiction
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="programming"
+                                value="programming">
+                            <label class="form-check-label" for="programming">
+                                Computer Programming
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking">
+                            <label class="form-check-label" for="cooking">
+                                Cooking
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="table">
+            <h1>Your books</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody id='tableBody'></tbody>
+            </table>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+     crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>

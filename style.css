@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url('363\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    height: 65rem;
+}
+.manu-bar{
+    background: cadetblue;
+    text-align: center;
+    height: 70px;
+
+}
+.manu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.manu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 10px;
+}
+.manu-bar ul li a{
+    text-decoration: none;
+    color: #ffff;
+}
+.active, .manu-bar ul li:hover{
+    background: rgb(67, 180, 180);
+    border-radius: 3px;
+}
+.manu-bar .fa{
+    margin-right: 8px;
+}
+.sub-manu-1{
+    display: none;
+
+}
+.manu-bar ul li:hover .sub-manu-1{
+    display: block;
+    position: absolute;
+    background:  rgb(67, 180, 180);
+    margin-top: 11px;
+    margin-left: 15px;
+
+}
+.manu-bar ul li:hover .sub-manu-1 ul{
+display: block;
+margin: 10px;
+
+}
+.manu-bar ul li:hover .sub-manu-1 ul li{
+width: 150px;
+padding: 10px;
+border-bottom: 1px dotted #ffff;
+background: transparent;
+border-radius: 0;
+text-align: left;
+}
+.manu-bar ul li:hover .sub-manu-1 ul li:last-child{
+    border-bottom: none;
+}
+.manu-bar ul li:hover .sub-manu-1 ul li a:hover{
+    color: yellowgreen;
+}
+.fa-angle-right{
+    float: right;
+}
+.sub-manu-2{
+    display: none;
+}
+.hover-me:hover .sub-manu-2{
+position: absolute;
+display: block;
+margin-top: -20px;
+margin-left: 160px;
+background: rgb(67, 180, 180);
+}
+@media only screen and (max-width: 1211px){
+    .manu-bar ul li {
+        width: 30px;
+    }
+
+}
